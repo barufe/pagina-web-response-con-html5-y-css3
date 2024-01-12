@@ -1,4 +1,4 @@
-/* Se resetea todos los elementos */
+/* Main Settings */
 :root {
   --primary-color: #4f4aa6;
   --secundary-color: #48ca95;
@@ -7,7 +7,10 @@
 
   --text-font: Poppins;
   --menu-font: Poppins-bold;
+  --section-title-font: Poppins-semibold;
   --header-title-font: Poppins-bold;
+  --banner-subtitle-font: Poppins-light;
+  --banner-title-font: Poppins;
 }
 
 * {
@@ -29,6 +32,23 @@
   font-family: Poppins-extrabold;
   src: url(./assets/fonts/Poppins-ExtraBold.ttf);
 }
+@font-face {
+  font-family: Poppins-black;
+  src: url(./assets/fonts/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: Poppins-semibold;
+  src: url(./assets/fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: Poppins-light;
+  src: url(./assets/fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: Poppins-regular;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+/* Header */
 
 header {
   background-image: url(assets/images/banner.jpg);
@@ -95,12 +115,185 @@ nav ul li a:hover {
   margin-top: 50px;
 }
 .header-title {
-    font-size: 80px;
-    font-family: var(--header-title-font);
+  font-size: 80px;
+  font-family: var(--header-title-font);
 }
 .header-subtitle {
-    font-size: 40px;
+  font-size: 40px;
 }
 .header-img {
-    margin: 5px 25px;
+  margin: 5px 25px;
 }
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu-mobile {
+    display: flex;
+  }
+  .menu-screen {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  .header-content {
+    flex-direction: column;
+  }
+  .header-content-text {
+    margin-left: 20px;
+  }
+  .header-title {
+    font-size: 40px;
+  }
+  .header-subtitle {
+    font-size: 20px;
+  }
+  .header-content-text p {
+    font-size: 16px;
+  }
+  .btn {
+    padding: 10px 30px;
+  }
+  .header-img {
+    margin: 50px 2px;
+    width: 95%;
+    height: 100%;
+    max-width: 500px;
+  }
+}
+/* End header */
+
+/* Cards sections */
+.cards {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-top: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 5px;
+  padding: 30px;
+  border: 1px solid var(--secundary-color);
+  border-radius: 15px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card h5 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.card p {
+  text-align: center;
+}
+/* End card section */
+
+
+/* Section products */
+.products {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.products h3 {
+  font-size: 26px;
+  font-family: var(--section-title-font);
+  border-bottom: 1px solid var(--secundary-color);
+  margin-bottom: 25px;
+}
+.product-container {
+  background-color: var(--light-color);
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 25px;
+  margin-bottom: 100px;
+}
+
+.product-card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.product-card a {
+  background-color: black;
+  color: var(--light-color);
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+.btn-secundary {
+  color: var(--secundary-color);
+  padding: 15px 60px;
+  border: 2px solid var(--secundary-color);
+  text-decoration: none;
+  margin: 0px 5px;
+}
+@media(max-width:1100px){
+  .product-container {
+    width: 96%;
+  }
+}
+/* End products section */
+
+/* Banner section*/
+.banner {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+}
+.banner-content {
+  display: flex;
+  justify-content: center;
+  
+}
+.banner-content-text {
+  max-width: 500px;
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+}
+.banner-title {
+  font-size: 40px;
+  font-family: var(--banner-title-font);
+}
+.banner-subtitle {
+  font-size: 20px;
+  font-family: var(--banner-subtitle-font);
+}
+.btn-primary-full{
+  color: var(--ligth-color);
+  padding: 15px 60px;
+  border: 2px solid var(--secundary-color);
+  background-color: var(--secundary-color);
+  text-decoration: none;
+  margin: 0px 5px;
+}
+.btn-primary-full:hover{
+  color: var(--secundary-color);
+  background-color: var(--primary-color);
+}
+@media(max-width: 800px){
+   .banner-content {
+    flex-direction: column;
+   }
+}
+/* End banner section*/
